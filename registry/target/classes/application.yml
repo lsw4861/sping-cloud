@@ -5,6 +5,7 @@ eureka:
   instance:
     hostname: registry
     prefer-ip-address: true
+    instance-id:
   client:
     registerWithEureka: false
     fetchRegistry: false
@@ -12,6 +13,8 @@ eureka:
       defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
 
 security:
+  basic:
+    enabled: true
   user:
     name: user
     password: ${REGISTRY_SERVER_PASSWORD:password}
