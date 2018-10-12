@@ -18,6 +18,8 @@ spring:
 girl:
   name: kitte
   age: 24
+env:
+  test2
 # eureka:
 #   client:
 #     service-url:
